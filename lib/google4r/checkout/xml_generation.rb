@@ -138,6 +138,13 @@ module Google4R #:nodoc:
         # <merchant-checkout-flow-support>
         flow_element = root.add_element('checkout-flow-support').add_element('merchant-checkout-flow-support')
 
+        # <rounding-policy>
+        if command.rounding_mode && command.rounding_rule then
+          rounding_element = flow_element.add_element('rounding-policy')
+          rounding_element.add_element('mode').text = command.rounding_mode
+          rounding_element.add_element('rule').text = command.rounding_rule
+        end
+
         # <tax-tables>
         if command.tax_tables then
           self.process_tax_tables(command.tax_tables, flow_element)

@@ -220,6 +220,12 @@ module Google4R #:nodoc:
       # The URL to continue shopping after completing the checkout (String, optional).
       attr_accessor :continue_shopping_url
       
+      # The rounding rule one of RoundingRule
+      attr_accessor :rounding_rule
+      
+      # The rounding mode one of RoundingMode
+      attr_accessor :rounding_mode
+      
       # A boolean flag; true iff the customer HAS to provide his phone number (optional).
       attr_accessor :request_buyer_phone_number
       

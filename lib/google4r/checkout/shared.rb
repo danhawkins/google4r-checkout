@@ -1082,5 +1082,22 @@ module Google4R #:nodoc:
       DELIVERED = 'DELIVERED'
       WILL_NOT_DELIVER = 'WILL_NOT_DELIVER'
     end
+    
+    # rounding mode
+    class RoundingMode
+      UP = 'UP'
+      DOWN = 'DOWN'
+      CEILING = 'CEILING'
+      HALF_UP = 'HALF_UP'
+      HALF_DOWN = 'HALF_DOWN'
+      HALF_EVEN = 'HALF_EVEN'
+    end
+    
+    # rounding ruke
+    class RoundingRule
+      PER_ITEM = 'PER_ITEM'
+      PER_LINE = 'PER_LINE'
+      TOTAL = 'TOTAL'
+    end
   end
 end
